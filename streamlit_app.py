@@ -1,7 +1,8 @@
 import streamlit as st
 from transformers import TrOCRProcessor, VisionEncoderDecoderModel
 from PIL import Image
-
+import warnings
+warnings.filterwarnings("ignore")
 # Load the TrOCR processor and model
 processor = TrOCRProcessor.from_pretrained("microsoft/trocr-base-handwritten")
 def load_model():
