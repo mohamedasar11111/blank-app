@@ -18,6 +18,7 @@ def show_image(path_str):  # Use snake_case for function names
 def ocr_image(src_img):
     return pytesseract.image_to_string(src_img)
 picture = st.file_uploader('Upload a photo')
+print(picture)
 picture_text = show_image(picture)  # Use snake_case for variable names
 exported_text = ocr_image(picture_text)
 print(exported_text)
