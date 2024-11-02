@@ -6,7 +6,6 @@ pytesseract
 transformers
 sentencepiece
 datasets[audio]
-tesseract-ocr
 subprocess
 pandas
 plotly
