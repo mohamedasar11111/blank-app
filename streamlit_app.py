@@ -8,7 +8,7 @@ import pytesseract
 import streamlit as st
 
 processor = TrOCRProcessor.from_pretrained("microsoft/trocr-large-handwritten")
-model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-large-handwritten")   
+model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-large-handwritten")
 
 def show_image(uploaded_file):
     if uploaded_file is not None:
