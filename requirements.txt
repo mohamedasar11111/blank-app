@@ -1,1 +1,16 @@
+torch
+datasets
 streamlit
+soundfile
+pytesseract
+transformers
+sentencepiece
+datasets[audio]
+tesseract-ocr
+libtesseract-dev
+subprocess
+pandas
+plotly
+yfinance
+pandas-datareader
+prophet
