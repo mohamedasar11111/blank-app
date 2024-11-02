@@ -7,7 +7,6 @@ transformers
 sentencepiece
 datasets[audio]
 tesseract-ocr
-libtesseract-dev
 subprocess
 pandas
 plotly
