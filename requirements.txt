@@ -4,11 +4,4 @@ streamlit
 soundfile
 pytesseract
 transformers
-sentencepiece
 datasets[audio]
-subprocess
-pandas
-plotly
-yfinance
-pandas-datareader
-prophet
