@@ -8,15 +8,24 @@ import pytesseract
 import streamlit as st
 
 processor = TrOCRProcessor.from_pretrained("microsoft/trocr-large-handwritten")
-model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-large-handwritten")
+model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-large-handwritten")   
 
-def show_image(path_str):  # Use snake_case for function names
-    img = Image.open(path_str).convert("RGB")
-    display(img)
-    return img
+def show_image(uploaded_file):
+    if uploaded_file is not None:
+        # Read the uploaded file as bytes
+        image_bytes = uploaded_file.read()
+        # Open the image using PIL
+        img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+        st.image(img, caption="Uploaded Image", use_column_width=True)
+        return img
+    else:
+        return None
 
 def ocr_image(src_img):
-    return pytesseract.image_to_string(src_img)
+    if src_img is not None:
+        return pytesseract.image_to_string(src_img)
+    else:
+        return ""
 picture = st.file_uploader('Upload a photo')
 print(picture)
 picture_text = show_image(picture)  # Use snake_case for variable names
