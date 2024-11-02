@@ -1,8 +1,1 @@
-torch
-datasets
-streamlit
-soundfile
-pytesseract
-transformers
-datasets[audio]
-IPython
+
