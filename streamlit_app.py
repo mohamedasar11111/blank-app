@@ -4,8 +4,11 @@ from PIL import Image
 
 # Load the TrOCR processor and model
 processor = TrOCRProcessor.from_pretrained("microsoft/trocr-base-handwritten")
-model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-base-handwritten")
+def load_model():
+    model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-base-handwritten")
+    return model
 
+model = load_model()
 # Set up the Streamlit app
 st.title("TrOCR for Image-to-Text")
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
