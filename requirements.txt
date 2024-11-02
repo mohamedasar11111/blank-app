@@ -3,5 +3,4 @@ pytesseract
 transformers
 datasets
 soundfile
-PIL
 IPython
