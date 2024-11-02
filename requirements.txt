@@ -6,4 +6,3 @@ datasets
 soundfile
 IPython
 datasets[audio]
-tesseract-ocr
